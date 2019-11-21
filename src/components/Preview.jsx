@@ -4,8 +4,27 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   color: white;
   overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
   & > img {
     width: 100%;
+  }
+
+  & > div.overlay {
+    background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0) 34%,
+      rgba(0, 0, 0, 0.5452556022408963) 100%
+    );
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
   }
 `;
 
@@ -65,6 +84,7 @@ const Preview = props => {
         src="https://occ-0-988-993.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABSpHMNyvIRy6PolVWkmMg80JA0Kdcldq3vIxohYsRrtBKVZEyJAW6ls4b6EoKP7DzCQ6Fvnq5C694tN5eN06_Hb5gHp2.webp?r=105"
         alt=""
       />
+      <div className="overlay" />
       <Detail>
         <img
           src="https://occ-0-988-993.1.nflxso.net/dnm/api/v6/5e0byrbbfBPBmtxyXMpKqMuqOQY/AAAABduWV1XI_V1CpMePQjJ8-_aIvKPmyAvR8CAXcOAAOByHH-uTuwXXxspW-VTWODhxZtUSBI1BPK3cvJE818mM1QQ_e73MVBZPxu6c.webp?r=9a5"
